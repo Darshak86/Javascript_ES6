@@ -12,9 +12,36 @@ console.log(user, channel, marks);
 
 // Rules for creating JavaScript Variables
 /*
-1. Cannot start with numbers
-2. Can start with letter, numbers, _ or $
-3. Are case sensitive
+  1. Variable names must begin with a letter, an underscore (_) or a dollar sign ($). 
+  2. Variable names can only contain letters, numbers, underscores, or dollar signs.
+  3. Variable names are case-sensitive. 
+  
+  The variable’s names are case sensitive that means uppercase letters like ‘A’  and lowercase letters like ‘a’ are treated differently.  
+
+  var firstName ;   // Valid
+  var _lastName ;   // Valid
+  var $age ;        // Valid
+  var abc ;         // Valid
+  var ABC ;         // Valid
+
+// Numbers are not allowed as a first character.
+     var 100age ;        // Not Valid   
+
+// Variable name can not contain a Mathematical or Logical Operator in the Name  
+     var === ;           // Not Valid   
+
+// Variable names can not contain spaces.
+     var first name ;    // Not Valid 
+     
+// "-" is not allowed in the variable names. it is reserved for subtraction.    
+     var first-name ;    // Not Valid
+
+// Reserved keyword can not be used in the variable names.
+     var for ;           // Not Valid
+
+// Variables can not be named starting from other symbols.     
+     var #name ;         // Not Valid
+
 */
 
 var city = "Delhi";
@@ -60,11 +87,59 @@ console.log(age); // SyntaxError: identifier "age" has already been declared.
 
 /* Most common programming case types:
 
-1. camelCase  
+1. camelCase   // most used
 2. kebab-case
 3. snake_case 
 4. PascalCase 
 
 */
 
-// most of use variables  : let and const 
+// most of use variables : let and const 
+
+// 3 Types of error 
+// SyntaxError, TypeError and ReferenceError
+
+// ReferenceError
+  // console.log(a) // Uncaught ReferenceError: Cannot access 'a' before initialization
+  // let a = 10
+
+// TypeError
+  // const b = 20
+  // b = 30         // Uncaught TypeError: Assignment to constant variable.
+
+// SyntaxError
+  // const c        // Uncaught SyntaxError: Missing initializer in const declaration
+  // c = 100
+
+
+// var            : Functional Scope
+// let and const  : Block Scope
+
+function data()
+{
+  var a = 10;
+  console.log(a); // 10
+
+  {
+    let b = 30;
+    const c = 40;
+    console.log(b); // 30
+    console.log(c); // 40
+  }
+
+// Block Scope
+  // console.log(b); // Uncaught ReferenceError: b is not defined
+  // console.log(c); // Uncaught ReferenceError: c is not defined
+}
+
+// Functional Scope
+  // console.log(a) // Uncaught ReferenceError: a is not defined
+
+data();
+
+// Hoisting
+  // console.log(a) // undefined
+  // var a = 100
+
+// let & const : 🔥Temporal Dead Zone  
+
