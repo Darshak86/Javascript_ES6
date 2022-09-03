@@ -17,52 +17,68 @@
 
 console.log("\nPrimitive data types\n\n");
 
-// String
-let user = "Darshak";
-console.log("Data type is user : " + (typeof user));   // Data type is user : string
+//......................................................................................
 
-// Numbers
-let marks = 34.4;
-console.log("Data type is marks : " + (typeof marks));  // Data type is marks : number
+// String :
 
-// Boolean
-let isDriver = true;
-console.log("Data type is isDriver : " + (typeof isDriver)); // Data type is isDriver : boolean
+    let user = "Darshak";
+    console.log("Data type is user : " + (typeof user));   // Data type is user : string
 
-// Null
-let nullVar = null;
-console.log("Data type is nullVar : " + (typeof nullVar));  // Data type is nullVar : object
+// Numbers :
 
-// Undefined
-let undef;  // let undef = undefined;  
-console.log("Data type is undef : " + (typeof undef));  // Data type is undef : undefined
+    let marks = 34.4;
+    console.log("Data type is marks : " + (typeof marks));  // Data type is marks : number
 
-//Symbol
-const mySymbol = Symbol();
-console.log("Data type is mySymbol : " + typeof mySymbol); // Data type is mySymbol : symbol
+// Boolean :
 
-// Reference / Structural Data Types  =======================================================================
+    let isDriver = true;
+    console.log("Data type is isDriver : " + (typeof isDriver)); // Data type is isDriver : boolean
+
+// Null :
+
+    let nullVar = null;
+    console.log("Data type is nullVar : " + (typeof nullVar));  // Data type is nullVar : object
+
+// Undefined :
+
+    let undef;  // let undef = undefined;  
+    console.log("Data type is undef : " + (typeof undef));  // Data type is undef : undefined
+
+//Symbol :
+
+    const mySymbol = Symbol();
+    console.log("Data type is mySymbol : " + typeof mySymbol); // Data type is mySymbol : symbol
+
+//......................................................................................
+
+// Reference / Structural Data Types  ========================================================================================
 
 console.log("\nReference / Structural Data Types \n\n");
 
-// Arrays
-let myArr = [1, 2, 3, 4, false, "string"];
-console.log("Data type is myArr : " + (typeof myArr));  // Data type is myArr : object
+//......................................................................................
 
-// Object Literals  or dictionary
-let stMarks = {
-    a: 89,
-    b: 36,
-    c: 34
-}
-console.log("Data type is stMarks : " + (typeof stMarks)); // Data type is stMarks : object
+// Arrays :
 
-// function
-function findName() {
-}
-console.log("Data type is findName : " + typeof findName); // Data type is findName : function
+    let myArr = [1, 2, 3, 4, false, "string"];
+    console.log("Data type is myArr : " + (typeof myArr));  // Data type is myArr : object
 
-// Date
-let date = new Date();
-console.log("Data type is date : " + typeof date); // Data type is date : object
+// Object Literals  or dictionary :
+
+    let stMarks = {
+        a: 89,
+        b: 36,
+        c: 34
+    }
+    console.log("Data type is stMarks : " + (typeof stMarks)); // Data type is stMarks : object
+
+// function :
+
+    function findName() {
+    }
+    console.log("Data type is findName : " + typeof findName); // Data type is findName : function
+
+// Date :
+
+    let date = new Date();
+    console.log("Data type is date : " + typeof date); // Data type is date : object
 
