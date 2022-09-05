@@ -147,7 +147,7 @@ console.log("Objects / Object Literals & destructuring");
 
 // Iterating over all keys of an object
 
-// Example:
+// Example: 1 
 
     let person0 = { gender: "male" };
 
@@ -158,10 +158,22 @@ console.log("Objects / Object Literals & destructuring");
 
     for (let key in person1) {
       console.log(key);
-    }  
-    
+    } 
+
     // Output : name, age, nationality
     // and gender
+    
+// Example: 2
+
+    for (const [key, value] of Object.entries(person1)) {
+        console.log(`key is = ${key} , value is = ${value}`);
+    }
+    
+    // Output : 
+    // key is = name , value is = Adam
+    // key is = age  , value is = 45
+    // key is = nationality , value is = Australian
+    // key is = gender , value is = male
 
 //......................................................................................
 
@@ -321,3 +333,54 @@ console.log("Objects / Object Literals & destructuring");
     let display1 = ({ firstName, lastName }) => console.log(`${firstName} ${lastName}`);
 
     display1(person33);
+
+//......................................................................................
+
+// Marge 2 object 
+
+// Example: 1
+
+// Using spread operator :
+
+    const obj11 = {username : "abc" , course :"msc it"}
+    const obj12 = { age : 21};
+    const obj13 = {...obj11 , ... obj12}
+
+    console.log(obj13) // {username: 'abc', course: 'msc it', age: 21}
+
+// Example : 2 
+
+// Add Some Value with marge object
+
+    const obj14 = {id:"15" ,...obj11, ...obj12 ,address :"america"};
+
+    console.log(obj14) // {id: '15', username: 'abc', course: 'msc it', age: 21, address: 'america'}
+
+// Example : 3 
+
+// Merge objects using Object.assign() method
+
+    let person5 = {
+    firstName: "John",
+    lastName: "Doe",
+    age: 25,
+    ssn: "123-456-2356"
+    };
+
+    let job = {
+    jobTitle: "JavaScript Developer",
+    country: "USA"
+    };
+
+    let employee5 = Object.assign(person5, job);
+    console.log(employee5);
+
+    // Output :
+    //  {firstName: "John",
+    //   lastName: "Doe",
+    //   age: 25,
+    //   ssn: "123-456-2356",
+    //   jobTitle: "JavaScript Developer",
+    //   country: "USA"
+    // }
+
